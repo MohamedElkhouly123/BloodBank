@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    android:id="@+id/login_layout"
+    xmlns:tools="http://schemas.android.com/tools">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginTop="@dimen/_50sdp"
+            >
+            <ImageView
+                android:id="@+id/list"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_135sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_95sdp"
+                android:layout_marginEnd="@dimen/_95sdp"
+                android:background="@drawable/group_83"
+                />
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            style="@style/CardView."
+
+        >
+
+            <EditText
+                android:id="@+id/login_phone_etxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="الجوال"
+                android:inputType="phone"
+                android:maxLength="11"
+                style="@style/EditText"
+                />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            style="@style/CardView."
+
+            >
+
+            <EditText
+                android:id="@+id/login_password_etxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="كلمة المرور"
+                android:inputType="textPassword"
+                style="@style/EditText"
+               />
+        </androidx.cardview.widget.CardView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            >
+
+
+
+                <CheckBox
+                    android:id="@+id/login_remember_me_chbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:buttonTint="@color/color2"
+                    android:fontFamily="@font/janna"
+                    android:hint=" تذكرني "
+                    android:textAlignment="gravity"
+                    android:textColorHint="@color/color2"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <TextView
+                    android:id="@+id/login_forget_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:fontFamily="@font/janna"
+                    android:text="هل نسيت كلمة السر ؟"
+                    android:textColor="@color/color2"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/login_btn_next"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="دخول"
+            style="@style/Button"
+             />
+    </LinearLayout>
+</ScrollView>
+    <TextView
+        android:id="@+id/login_creat_new_account_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/txtstyle"
+        android:fontFamily="@font/janna"
+        android:textAlignment="center"
+        android:text="لا تملك حساب ؟ يمكنك التسجيل من هنا"
+        android:textColor="@color/color1"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12ssp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BloodBank</string>
+    <string name="title_activity_home_cycle">HomeCycleActivity</string>
+    <string name="title_home">الرئيسيه</string>
+    <string name="title_update_my_info">تعديل البيانات</string>
+    <string name="title_notifications">التنبيهات</string>
+    <string name="more_setting">المزيد</string>
+</resources>

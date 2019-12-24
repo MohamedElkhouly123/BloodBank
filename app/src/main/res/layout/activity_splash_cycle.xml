@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fram"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/splash"
+    tools:context=".view.activity.SplashCycleActivity">
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_gravity="bottom|center"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/_115sdp"
+        />
+</FrameLayout>
