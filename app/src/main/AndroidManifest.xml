@@ -14,7 +14,6 @@
         <activity
             android:name=".view.activity.HomeCycleActivity"
             android:label="@string/title_activity_home_cycle"
-            android:theme="@style/AppTheme"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

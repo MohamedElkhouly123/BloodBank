@@ -7,7 +7,7 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/update_my_info"
+        android:id="@+id/navigation_update_my_info"
         android:icon="@drawable/ic_person_black_24dp"
         android:title="@string/title_update_my_info" />
 
@@ -16,7 +16,7 @@
         android:icon="@drawable/ic_notifications_black_24dp"
         android:title="@string/title_notifications" />
     <item
-        android:id="@+id/more_setting"
+        android:id="@+id/navigation_more_setting"
         android:icon="@drawable/ic_more_horiz_black_24dp"
         android:title="@string/more_setting" />
 

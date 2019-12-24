@@ -1,30 +1,67 @@
 package com.example.bloodbank.view.activity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.GridLayout;
 
 import com.example.bloodbank.R;
+import com.example.bloodbank.view.fragment.homeCycle2.home.HomeFragment;
+import com.example.bloodbank.view.fragment.homeCycle2.more.MoreFragment;
+import com.example.bloodbank.view.fragment.homeCycle2.notifications.NotificationsFragment;
+import com.example.bloodbank.view.fragment.homeCycle2.update_my_info.UpdateMyInfoFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
-public class HomeCycleActivity extends BaseActivity {
+
+import static com.example.bloodbank.utils.HelperMethod.replaceFragment;
+
+
+public class HomeCycleActivity extends BaseActivity implements  BottomNavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_cycle);
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_update_my_info, R.id.navigation_notifications,R.id.navigation_more)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(navView, navController);
+        replaceFragment(getSupportFragmentManager(), R.id.fram, new HomeFragment());
+
+        BottomNavigationView navigation =  findViewById(R.id.nav_view);
+        navigation.setOnNavigationItemSelectedListener(this);
+
+
+
     }
+
+
+
+
+
+
+
+
+
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.navigation_home) {
+            replaceFragment(getSupportFragmentManager(), R.id.fram, new HomeFragment());
+        } else if (id == R.id.navigation_update_my_info) {
+            replaceFragment(getSupportFragmentManager(), R.id.fram, new UpdateMyInfoFragment());
+        } else if (id == R.id.navigation_notifications) {
+            replaceFragment(getSupportFragmentManager(), R.id.fram, new NotificationsFragment());
+
+        } else if (id == R.id.navigation_more_setting) {
+            replaceFragment(getSupportFragmentManager(), R.id.fram, new MoreFragment());
+        }
+
+
+
+        return true;
+    }
+
 
 }
