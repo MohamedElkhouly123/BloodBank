@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="@dimen/_10sdp"
+        android:gravity="center"
+        android:background="@color/color1"
+        > <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        >
+        <ImageView
+            android:id="@+id/imgBackRecent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_w_black_24dp"
+            android:tint="#fff" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:fontFamily="@font/janna"
+            android:text="تواصل معنا"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="@color/color2"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_30sdp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="الجوال"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    style="@style/MoreText"
+                    />
+                <view
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    style="@style/MoreView"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/_27sdp"
+                        android:layout_height="@dimen/_27sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:srcCompat="@drawable/ic_phone_orange_24dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="01098776655"
+                        android:textColor="@color/color3"
+                        android:layout_gravity="center_vertical"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/tv_email2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="البريد الالكترونى"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    style="@style/MoreText"
+                    />
+                <view
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    style="@style/MoreView"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_15sdp"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/_27sdp"
+                        android:layout_height="@dimen/_27sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:srcCompat="@drawable/ic_email_orange_24dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mohaahma959@gmail.com"
+                        android:textColor="@color/color3"
+                        android:layout_gravity="center_vertical"
+                        />
+                </LinearLayout>
+                <view
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    style="@style/MoreView"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_43sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/group89"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_43sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/group87"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_43sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/group90"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_43sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/group88"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                style="@style/CardView2."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp">
+
+                <EditText
+                    android:id="@+id/register_phone_etxt"
+                    style="@style/EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="عنوان الرساله"
+                    android:inputType="textAutoComplete" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                style="@style/CardView2."
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_12sdp">
+
+                <EditText
+
+                    style="@style/EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="نص الرساله"
+                    android:maxLines="7"
+                    android:inputType="textAutoComplete" />
+            </androidx.cardview.widget.CardView>
+
+
+
+            <Button
+                android:id="@+id/register_enter_btn"
+                style="@style/ButtonRed"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:text="ارسال" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
