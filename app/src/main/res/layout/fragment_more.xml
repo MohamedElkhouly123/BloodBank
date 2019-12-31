@@ -46,6 +46,7 @@
     android:paddingBottom="@dimen/_30sdp"
     >
     <LinearLayout
+        android:id="@+id/more_my_favourte_lay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -68,12 +69,10 @@
             style="@style/MoreText"
             />
     </LinearLayout>
-     <view
-         android:layout_width="match_parent"
-         android:layout_height="1dp"
-         style="@style/MoreView"
-         />
+
+
     <LinearLayout
+        android:id="@+id/more_contact_us_lay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -94,12 +93,9 @@
             android:text="تواصل معنا"
             style="@style/MoreText"/>
     </LinearLayout>
-    <view
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        style="@style/MoreView"
-        />
+
     <LinearLayout
+        android:id="@+id/more_about_app_lay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -120,12 +116,9 @@
             android:text="عن التطبيق"
             style="@style/MoreText"/>
     </LinearLayout>
-    <view
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        style="@style/MoreView"
-        />
+
     <LinearLayout
+        android:id="@+id/more_my_put_rate_on_store_lay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -146,12 +139,9 @@
             android:text="تقييم التطبيق على المتجر"
             style="@style/MoreText"/>
     </LinearLayout>
-    <view
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        style="@style/MoreView"
-        />
+
     <LinearLayout
+        android:id="@+id/more_nottiffy_setting_lay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -172,12 +162,9 @@
             android:text="اعدادات الاشعارات"
             style="@style/MoreText"/>
     </LinearLayout>
-    <view
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        style="@style/MoreView"
-        />
+
     <LinearLayout
+        android:id="@+id/more_sign_out_lay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"

@@ -26,7 +26,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_32sdp"
             android:fontFamily="@font/janna"
             android:text="تواصل معنا"
             android:gravity="center_vertical"
@@ -58,16 +58,13 @@
                     android:layout_height="wrap_content"
                     android:text="الجوال"
                     android:textSize="@dimen/_15sdp"
+                    android:layout_gravity="start"
                     android:layout_marginEnd="@dimen/_20sdp"
                     android:layout_marginStart="@dimen/_20sdp"
                     android:layout_marginTop="@dimen/_10sdp"
                     style="@style/MoreText"
                     />
-                <view
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    style="@style/MoreView"
-                    />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -103,16 +100,13 @@
                     android:layout_height="wrap_content"
                     android:text="البريد الالكترونى"
                     android:textSize="@dimen/_15sdp"
+                    android:layout_gravity="start"
                     android:layout_marginEnd="@dimen/_20sdp"
                     android:layout_marginStart="@dimen/_20sdp"
                     android:layout_marginTop="@dimen/_10sdp"
                     style="@style/MoreText"
                     />
-                <view
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    style="@style/MoreView"
-                    />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -138,12 +132,7 @@
                         android:layout_gravity="center_vertical"
                         />
                 </LinearLayout>
-                <view
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="@dimen/_25sdp"
-                    style="@style/MoreView"
-                    />
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -192,7 +181,7 @@
                 </LinearLayout>
             </LinearLayout>
             <androidx.cardview.widget.CardView
-                style="@style/CardView2."
+                style="@style/CardView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_12sdp">
@@ -207,7 +196,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                style="@style/CardView2."
+                style="@style/CardView2"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_100sdp"
                 android:layout_marginTop="@dimen/_12sdp">

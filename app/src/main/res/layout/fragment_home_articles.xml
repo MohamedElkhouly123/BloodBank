@@ -47,11 +47,12 @@
             android:id="@+id/register_blood_type_etxt"
 
             style="@style/EditText"
-            android:layout_width="@dimen/_220sdp"
+            android:layout_width="@dimen/_216sdp"
             android:layout_height="match_parent"
             android:drawableStart="@drawable/ic_search_red_24dp"
             android:focusable="false"
             android:hint="ادخل كلمه البحث هنا"
+            android:textAlignment="textEnd"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
