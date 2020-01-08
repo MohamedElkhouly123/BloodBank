@@ -56,7 +56,7 @@
                 android:layout_marginTop="@dimen/_15sdp">
 
                 <EditText
-                    android:id="@+id/register_name_etxt"
+                    android:id="@+id/update_my_info_name_etxt"
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -72,7 +72,7 @@
                 android:layout_marginTop="@dimen/_12sdp">
 
                 <EditText
-                    android:id="@+id/register_email_etxt"
+                    android:id="@+id/update_my_info_email_etxt"
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -89,7 +89,7 @@
                 android:layout_marginTop="@dimen/_12sdp">
 
                 <EditText
-                    android:id="@+id/register_birth_day_etxt"
+                    android:id="@+id/update_my_info_birth_day_etxt"
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -118,7 +118,7 @@
                         app:layout_constraintEnd_toEndOf="parent">
 
                         <Spinner
-                            android:id="@+id/register_blood_type_id_spinner"
+                            android:id="@+id/update_my_info_blood_type_id_spinner"
                             style="@style/spinner_style"
                             android:layout_width="@dimen/_130sdp"
                             android:layout_height="@dimen/_20sdp"
@@ -127,7 +127,7 @@
                     </LinearLayout>
 
                     <EditText
-                        android:id="@+id/register_blood_type_etxt"
+                        android:id="@+id/update_my_info_blood_type_etxt"
 
                         style="@style/EditText"
                         android:layout_width="wrap_content"
@@ -148,7 +148,7 @@
                 android:layout_marginTop="@dimen/_12sdp">
 
                 <EditText
-                    android:id="@+id/register_last_date_to_donation_etxt"
+                    android:id="@+id/update_my_info_last_date_to_donation_etxt"
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -168,7 +168,7 @@
                     android:layout_height="match_parent">
 
                     <EditText
-                        android:id="@+id/register_governrate_etxt"
+                        android:id="@+id/update_my_info_governrate_etxt"
                         style="@style/EditText"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -189,7 +189,7 @@
 
 
                         <Spinner
-                            android:id="@+id/register_governrate_id_spinner"
+                            android:id="@+id/update_my_info_governrate_id_spinner"
                             style="@style/spinner_style"
                             android:layout_width="@dimen/_130sdp"
                             android:layout_height="@dimen/_20sdp"
@@ -215,7 +215,7 @@
 
 
                     <EditText
-                        android:id="@+id/register_city_etxt"
+                        android:id="@+id/update_my_info_city_etxt"
                         style="@style/EditText"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -236,7 +236,7 @@
                         app:layout_constraintEnd_toEndOf="parent">
 
                         <Spinner
-                            android:id="@+id/register_city_id_spinner"
+                            android:id="@+id/update_my_info_city_id_spinner"
                             style="@style/spinner_style"
                             android:layout_width="@dimen/_130sdp"
                             android:layout_height="@dimen/_20sdp"
@@ -253,7 +253,7 @@
                 android:layout_marginTop="@dimen/_12sdp">
 
                 <EditText
-                    android:id="@+id/register_phone_etxt"
+                    android:id="@+id/update_my_info_phone_etxt"
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -270,7 +270,7 @@
                 android:layout_marginTop="@dimen/_12sdp">
 
                 <EditText
-                    android:id="@+id/register_password_etxt"
+                    android:id="@+id/update_my_info_password_etxt"
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -286,7 +286,7 @@
                 android:layout_marginTop="@dimen/_12sdp">
 
                 <EditText
-                    android:id="@+id/register_confirm_password_etxt"
+                    android:id="@+id/update_my_info_confirm_password_etxt"
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -296,13 +296,13 @@
             </androidx.cardview.widget.CardView>
 
             <Button
-                android:id="@+id/register_enter_btn"
+                android:id="@+id/update_my_info_confirm_btn"
                 style="@style/Button"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginBottom="@dimen/_30sdp"
-                android:text="دخول" />
+                android:text="تاكيد" />
         </LinearLayout>
     </ScrollView>
 

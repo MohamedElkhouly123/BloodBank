@@ -21,7 +21,7 @@
 
             </LinearLayout>
             <ImageView
-                android:id="@+id/country_photo"
+                android:id="@+id/post_details_fragment_iv_photo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -41,7 +41,7 @@
                 android:gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/country_photo">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -49,7 +49,7 @@
                     android:gravity="center_vertical">
 
                     <ImageView
-                        android:id="@+id/imgBackRecent"
+                        android:id="@+id/fragment_home_article_item_details_img_back_recent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:tint="#fff"
@@ -61,50 +61,56 @@
             <LinearLayout
                 android:id="@+id/linearLayout4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@drawable/shape"
                 android:orientation="vertical"
-                android:paddingBottom="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_90sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linear">
 
-                <TextView
-                    android:id="@+id/register_name_etxt"
-                    style="@style/EditText"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:drawableStart="@drawable/ic_favorite_black_24dp"
-                    android:inputType="text"
-                    android:text="طرق الوقايه من الامراض"
-                    android:textAlignment="center" />
+                    android:orientation="horizontal">
 
+                    <TextView
+                        android:id="@+id/fragment_home_article_item_details_safe_ways_and_favourte_txt"
+                        style="@style/EditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:text="طرق الوقايه من الامراض"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/post_details_fragment_iv_is_favourite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        app:srcCompat="@drawable/ic_favorite_black_24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/fragment_home_article_item_details_safe_ways_and_favourte_txt"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
                 <TextView
+                    android:id="@+id/fragment_home_article_item_details_safe_ways_txt1"
                     style="@style/TextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:text="طرق الوقايه من الامراض طرق الوقايه من الامراض طرق الوقايه من الامراض طرق الوقايه من الامراض" />
+                    android:text="من الامراض طرق الوقايه من الامراض طرق الوقايه من الامراضمن الامراض طرق الوقايه من الامراض طرق الوقايه من الامراضطرق الوقايه من الامراض طرق الوقايه من الامراض طرق الوقايه من الامراض طرق الوقايه من الامراض" />
 
-                <TextView
-                    style="@style/TextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="طرق الوقايه من الامراض طرق الوقايه من الامراض" />
 
-                <TextView
-                    style="@style/TextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="طرق الوقايه من الامراض طرق الوقايه من الامراض طرق الوقايه من الامراض طرق الوقايه من الامراض" />
 
-                <TextView
-                    style="@style/TextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="طرق الوقايه من الامراض طرق الوقايه من الامراض" />
+
 
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

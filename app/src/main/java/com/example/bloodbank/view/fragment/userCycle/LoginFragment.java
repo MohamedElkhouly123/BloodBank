@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -14,7 +13,7 @@ import androidx.annotation.NonNull;
 
 
 import com.example.bloodbank.R;
-import com.example.bloodbank.model.login.Login;
+import com.example.bloodbank.data.model.client.Client;
 import com.example.bloodbank.view.activity.HomeCycleActivity;
 import com.example.bloodbank.view.fragment.BaSeFragment;
 
@@ -71,7 +70,7 @@ public class LoginFragment extends BaSeFragment {
             case R.id.login_remember_me_chbox:
                 break;
             case R.id.login_forget_id:
-                replaceFragment(getActivity().getSupportFragmentManager(), R.id.fram, new ResetPassword_Fragment());
+                replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram, new ResetPassword_Fragment());
                 break;
             case R.id.login_btn_next:
                 phoneStr=loginPhoneEtxt.getText().toString().trim();
@@ -92,15 +91,15 @@ public class LoginFragment extends BaSeFragment {
                 break;
             case R.id.login_creat_new_account_txt:
                 RegisterFragment register = new RegisterFragment();
-                replaceFragment(getActivity().getSupportFragmentManager(), R.id.fram, new RegisterFragment());
+                replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram, new RegisterFragment());
                 break;
         }
     }
 
     private void onCall(String phone, String password) {
-        getApiClient().userLogin(phone, password).enqueue(new Callback<Login>() {
+        getApiClient().userLogin(phone, password).enqueue(new Callback<Client>() {
             @Override
-            public void onResponse(Call<Login> call, Response<Login> response) {
+            public void onResponse(Call<Client> call, Response<Client> response) {
 
                 try {
 
@@ -123,7 +122,7 @@ public class LoginFragment extends BaSeFragment {
             }
 
             @Override
-            public void onFailure(Call<Login> call, Throwable t) {
+            public void onFailure(Call<Client> call, Throwable t) {
 
             }
         });

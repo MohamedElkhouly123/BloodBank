@@ -21,7 +21,7 @@ public class EmptyAdapter extends RecyclerView.Adapter<EmptyAdapter.ViewHolder> 
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.cardview_category_item,
+        View view = LayoutInflater.from(context).inflate(R.layout.cardview_posts_item,
                 parent, false);
 
         return new ViewHolder(view);

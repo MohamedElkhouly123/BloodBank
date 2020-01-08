@@ -1,9 +1,5 @@
 package com.example.bloodbank.view.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,7 +7,6 @@ import android.widget.ProgressBar;
 
 import com.example.bloodbank.R;
 import com.example.bloodbank.view.fragment.splashCycle.InroFragment;
-import com.example.bloodbank.view.fragment.splashCycle.SplashFragment;
 
 import butterknife.BindView;
 
@@ -40,7 +35,7 @@ public class SplashCycleActivity extends BaseActivity {
                     startActivity(new Intent(SplashCycleActivity.this, HomeCycleActivity.class));
                     finish();
                 }else {
-                    replaceFragment(getSupportFragmentManager(), R.id.fram, new InroFragment());
+                    replaceFragment(getSupportFragmentManager(), R.id.home_activity_fram, new InroFragment());
                 }
 
             }

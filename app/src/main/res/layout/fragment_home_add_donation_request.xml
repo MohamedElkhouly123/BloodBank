@@ -51,7 +51,7 @@
                 android:layout_marginTop="@dimen/_15sdp">
 
                 <EditText
-                    android:id="@+id/register_name_etxt"
+                    android:id="@+id/home_add_donation_request_name_etxt"
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -66,7 +66,7 @@
                 android:layout_marginTop="@dimen/_12sdp">
 
                 <EditText
-                    android:id="@+id/register_email_etxt"
+                    android:id="@+id/home_add_donation_request_email_etxt"
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -96,7 +96,7 @@
                         app:layout_constraintEnd_toEndOf="parent">
 
                         <Spinner
-                            android:id="@+id/register_blood_type_id_spinner"
+                            android:id="@+id/home_add_donation_request_blood_type_id_spinner"
                             style="@style/spinner_style"
                             android:layout_width="@dimen/_130sdp"
                             android:layout_height="@dimen/_20sdp"
@@ -105,7 +105,7 @@
                     </LinearLayout>
 
                     <EditText
-                        android:id="@+id/register_blood_type_etxt"
+                        android:id="@+id/home_add_donation_request_blood_type_etxt"
 
                         style="@style/EditText"
                         android:layout_width="wrap_content"
@@ -125,7 +125,7 @@
                 android:layout_marginTop="@dimen/_12sdp">
 
                 <EditText
-                    android:id="@+id/register_last_date_to_donation_etxt"
+                    android:id="@+id/home_add_donation_request_bags_number_etxt"
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -139,7 +139,7 @@
                 android:layout_marginTop="@dimen/_12sdp">
 
                 <TextView
-                    android:id="@+id/date_to_donation_etxt"
+                    android:id="@+id/home_add_donation_request_hospital_location_etxt"
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:drawableStart="@drawable/ic_my_location_black_24dp"
@@ -158,7 +158,7 @@
                     android:layout_height="match_parent">
 
                     <EditText
-                        android:id="@+id/register_governrate_etxt"
+                        android:id="@+id/home_add_donation_request_governrate_etxt"
                         style="@style/EditText"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -178,7 +178,7 @@
 
 
                         <Spinner
-                            android:id="@+id/register_governrate_id_spinner"
+                            android:id="@+id/home_add_donation_request_governrate_id_spinner"
                             style="@style/spinner_style"
                             android:layout_width="@dimen/_130sdp"
                             android:layout_height="@dimen/_20sdp"
@@ -204,7 +204,7 @@
 
 
                     <EditText
-                        android:id="@+id/register_city_etxt"
+                        android:id="@+id/home_add_donation_request_city_etxt"
                         style="@style/EditText"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -224,7 +224,7 @@
                         app:layout_constraintEnd_toEndOf="parent">
 
                         <Spinner
-                            android:id="@+id/register_city_id_spinner"
+                            android:id="@+id/home_add_donation_request_city_id_spinner"
                             style="@style/spinner_style"
                             android:layout_width="@dimen/_130sdp"
                             android:layout_height="@dimen/_20sdp"
@@ -241,7 +241,7 @@
                 android:layout_marginTop="@dimen/_12sdp">
 
                 <EditText
-                    android:id="@+id/register_phone_etxt"
+                    android:id="@+id/home_add_donation_request_phone_etxt"
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -257,7 +257,7 @@
                 android:layout_marginTop="@dimen/_12sdp">
 
                 <EditText
-
+                    android:id="@+id/home_add_donation_request_notes"
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -269,7 +269,7 @@
 
 
             <Button
-                android:id="@+id/register_enter_btn"
+                android:id="@+id/home_add_donation_request_send_btn"
                 style="@style/ButtonRed"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_30sdp"

@@ -1,18 +1,15 @@
 package com.example.bloodbank.view.fragment.splashCycle;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
 
 import com.example.bloodbank.R;
 import com.example.bloodbank.view.fragment.BaSeFragment;
@@ -74,7 +71,7 @@ public class SplashFragment extends BaSeFragment {
 private void loadFragment(Fragment fragment) {
     // load fragment
     FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-    transaction.replace(R.id.fram, fragment);
+    transaction.replace(R.id.home_activity_fram, fragment);
     transaction.addToBackStack(null);
     transaction.commit();
 }

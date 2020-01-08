@@ -10,7 +10,7 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 
 import com.example.bloodbank.R;
-import com.example.bloodbank.model.resetPassword.ResetPassword;
+import com.example.bloodbank.data.model.resetPassword.ResetPassword;
 import com.example.bloodbank.view.fragment.BaSeFragment;
 
 import butterknife.BindView;
@@ -57,7 +57,7 @@ public class ResetPassword_Fragment extends BaSeFragment {
 
                     if (response.body().getStatus() == 1) {
                         SaveData(getActivity(), PHONE, phone);
-                        replaceFragment(getActivity().getSupportFragmentManager(), R.id.fram, new NewPassword_Fragment());
+                        replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram, new NewPassword_Fragment());
 
                     }
 

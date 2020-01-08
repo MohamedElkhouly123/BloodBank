@@ -9,7 +9,7 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 
 import com.example.bloodbank.R;
-import com.example.bloodbank.model.newPassword.NewPassword;
+import com.example.bloodbank.data.model.resetPassword.ResetPassword;
 import com.example.bloodbank.view.fragment.BaSeFragment;
 
 import butterknife.BindView;
@@ -72,9 +72,9 @@ public class NewPassword_Fragment extends BaSeFragment {
 
     private void onCall(String password, String passwordConfirm, String pinCode,String phone) {
 
-        getApiClient().userNewPassword(password,passwordConfirm,pinCode,phone).enqueue(new Callback<NewPassword>() {
+        getApiClient().userNewPassword(password,passwordConfirm,pinCode,phone).enqueue(new Callback<ResetPassword>() {
             @Override
-            public void onResponse(Call<NewPassword> call, Response<NewPassword> response) {
+            public void onResponse(Call<ResetPassword> call, Response<ResetPassword> response) {
 
                 try {
 
@@ -90,7 +90,7 @@ public class NewPassword_Fragment extends BaSeFragment {
             }
 
             @Override
-            public void onFailure(Call<NewPassword> call, Throwable t) {
+            public void onFailure(Call<ResetPassword> call, Throwable t) {
 
             }
         });

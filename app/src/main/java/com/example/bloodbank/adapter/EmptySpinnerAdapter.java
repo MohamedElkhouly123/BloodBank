@@ -9,15 +9,16 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.bloodbank.R;
-import com.example.bloodbank.model.listOfCities.GeneralResponseData;
+import com.example.bloodbank.data.model.generalResponse.GeneralResponseData2;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class EmptySpinnerAdapter extends BaseAdapter {
 
     private Context context;
-    private List<GeneralResponseData> generalResponseDataList = new ArrayList<>();
+    private List<GeneralResponseData2> generalResponseDataList = new ArrayList<>();
     private LayoutInflater inflter;
     public int selectedId = 0;
 
@@ -27,9 +28,10 @@ public class EmptySpinnerAdapter extends BaseAdapter {
         inflter = (LayoutInflater.from(applicationContext));
     }
 
-    public void setData(List<GeneralResponseData> generalResponseDataList, String hint) {
-        generalResponseDataList.add(new GeneralResponseData(0, hint));
-        this.generalResponseDataList = generalResponseDataList;
+    public void setData(Collection<? extends GeneralResponseData2> generalResponseDataList, String hint) {
+        this.generalResponseDataList = new ArrayList<>();
+        this.generalResponseDataList.add(new GeneralResponseData2(0, hint));
+        this.generalResponseDataList.addAll(generalResponseDataList);
     }
 
     @Override
@@ -58,6 +60,7 @@ public class EmptySpinnerAdapter extends BaseAdapter {
 
         return view;
     }
+
     @Override
     public View getDropDownView(int i, View view, ViewGroup viewGroup) {
         view = inflter.inflate(R.layout.simple_list_item_1, null);

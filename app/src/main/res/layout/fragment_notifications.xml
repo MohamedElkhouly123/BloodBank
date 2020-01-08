@@ -1,28 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <include
-        android:id="@+id/include"
-        layout="@layout/cardview_category_item"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="@dimen/_10sdp"
+        android:gravity="center"
+        android:background="@color/color1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/janna"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:text="التنبيهات"
+            android:textAlignment="center"
+            android:textColor="@color/color2"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold"
+            />
+    </androidx.appcompat.widget.Toolbar>
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/home_donation_requests_recycler_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:paddingTop="@dimen/_15sdp"-->
+<!--        android:scrollbars="vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/toolbar" />-->
+<!--    <include-->
+<!--        android:id="@+id/include"-->
+<!--        layout="@layout/cardview_article_item"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <View
-        style="@style/MoreView"
+<!--    <View-->
+<!--        style="@style/MoreView"-->
+<!--        android:layout_width="match_parent"-->
+
+<!--        android:layout_height="1dp"-->
+
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/include"-->
+<!--        tools:layout_editor_absoluteX="26dp" />-->
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/donations_list_Fragment_sr_refresh_donations"
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        android:layout_height="1dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include"
-        tools:layout_editor_absoluteX="26dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/notifications_fragment_rv_notification_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/load_more" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <include
+                    layout="@layout/item_load_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true" />
+
+                <include layout="@layout/error" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

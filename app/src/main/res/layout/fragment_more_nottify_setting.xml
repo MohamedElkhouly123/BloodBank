@@ -98,109 +98,12 @@
                 android:visibility="gone"
                 android:background="@drawable/shape3"
                 >
-                <LinearLayout
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/more_nottifies_setting_drop_down_blood_types_recycler_view2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="false"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:fontFamily="@font/janna"
-                        android:hint="  B+ "
-                        android:textColorHint="@color/color1"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:button="@drawable/custom_checkbox"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8" />
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="true"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:fontFamily="@font/janna"
-                        android:hint="  B+ "
-                        android:textColorHint="@color/color1"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:button="@drawable/custom_checkbox"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8" />
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="false"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:fontFamily="@font/janna"
-                        android:hint="  B+ "
-                        android:textColorHint="@color/color1"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:button="@drawable/custom_checkbox"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    android:orientation="horizontal"
-                    >
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="false"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:fontFamily="@font/janna"
-                        android:hint="  B+ "
-                        android:textColorHint="@color/color1"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:button="@drawable/custom_checkbox"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8" />
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="false"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:fontFamily="@font/janna"
-                        android:hint="  B+ "
-                        android:textColorHint="@color/color1"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:button="@drawable/custom_checkbox"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8" />
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="false"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:fontFamily="@font/janna"
-                        android:hint="  B+ "
-                        android:textColorHint="@color/color1"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:button="@drawable/custom_checkbox"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8" />
-                </LinearLayout>
+                    android:scrollbars="vertical"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -246,109 +149,12 @@
                 android:visibility="gone"
                 android:background="@drawable/shape3"
                 >
-                <LinearLayout
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/more_nottifies_setting_drop_down_governrates_recycler_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="false"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:fontFamily="@font/janna"
-                        android:hint="  B+ "
-                        android:textColorHint="@color/color1"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:button="@drawable/custom_checkbox"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8" />
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="true"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:fontFamily="@font/janna"
-                        android:hint="  B+ "
-                        android:textColorHint="@color/color1"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:button="@drawable/custom_checkbox"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8" />
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="false"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:fontFamily="@font/janna"
-                        android:hint="  B+ "
-                        android:textColorHint="@color/color1"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:button="@drawable/custom_checkbox"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    android:orientation="horizontal"
-                    >
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="false"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:fontFamily="@font/janna"
-                        android:hint="  B+ "
-                        android:textColorHint="@color/color1"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:button="@drawable/custom_checkbox"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8" />
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="false"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:fontFamily="@font/janna"
-                        android:hint="  B+ "
-                        android:textColorHint="@color/color1"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:button="@drawable/custom_checkbox"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8" />
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="false"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:fontFamily="@font/janna"
-                        android:hint="  B+ "
-                        android:textColorHint="@color/color1"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:button="@drawable/custom_checkbox"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8" />
-                </LinearLayout>
+                    android:scrollbars="vertical"
+             />
             </LinearLayout>
             <Button
                 android:id="@+id/more_nottifies_setting_dsave_btn"

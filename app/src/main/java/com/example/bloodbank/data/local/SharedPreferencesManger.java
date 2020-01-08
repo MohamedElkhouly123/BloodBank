@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 
 
-import com.example.bloodbank.model.login.LoginData;
+import com.example.bloodbank.data.model.client.ClientData;
 import com.google.gson.Gson;
 
 public class SharedPreferencesManger {
@@ -61,12 +61,12 @@ public class SharedPreferencesManger {
         return sharedPreferences.getString(data_Key, null);
     }
 
-    public static LoginData LoadUserData(Activity activity) {
+    public static ClientData LoadUserData(Activity activity) {
         setSharedPreferences(activity);
 
-        LoginData loginData = null;
+        ClientData loginData = null;
         Gson gson = new Gson();
-        loginData = gson.fromJson(LoadData(activity, USER_DATA), LoginData.class);
+        loginData = gson.fromJson(LoadData(activity, USER_DATA), ClientData.class);
 
         return loginData;
     }

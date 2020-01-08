@@ -24,9 +24,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.bloodbank.R;
+import com.example.bloodbank.data.model.DateTxt;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -42,7 +45,11 @@ public class HelperMethod {
         transaction.addToBackStack(null);
         transaction.commit();
     }
-
+    public static void setInitRecyclerViewAsGridLayoutManager(Activity activity, RecyclerView recyclerView, GridLayoutManager gridLayoutManager, int numberOfColumns) {
+        gridLayoutManager = new GridLayoutManager(activity, numberOfColumns);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(gridLayoutManager);
+    }
     public static void showCalender(Context context, String title, final TextView text_view_data, final DateTxt data1) {
         DatePickerDialog mDatePicker = new DatePickerDialog(context, AlertDialog.THEME_HOLO_DARK, new DatePickerDialog.OnDateSetListener() {
             public void onDateSet(DatePicker datepicker, int selectedYear, int selectedMonth, int selectedDay) {

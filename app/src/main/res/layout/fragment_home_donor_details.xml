@@ -16,13 +16,13 @@
         android:gravity="center_vertical"
         >
         <ImageView
-            android:id="@+id/imgBackRecent"
+            android:id="@+id/home_donor_details_img_back_recent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_arrow_w_black_24dp"
             android:tint="#fff" />
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/home_donor_details_donor_name_txt_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_32sdp"
@@ -51,12 +51,14 @@
             >
 
             <TextView
+                android:id="@+id/home_donor_details_donor_name_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="الاسم : محمد"
                 style="@style/DonorTextView2"
                 />
             <TextView
+                android:id="@+id/home_donor_details_age_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="العمر : 23"
@@ -64,6 +66,7 @@
 
                 />
             <TextView
+                android:id="@+id/home_donor_details_blood_type_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="فصيله الدم : B-"
@@ -71,6 +74,7 @@
 
                 />
             <TextView
+                android:id="@+id/home_donor_details_package_required_number_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="عدد الاكياس المطلوبه : 3"
@@ -78,6 +82,7 @@
 
                 />
             <TextView
+                android:id="@+id/home_donor_details_hospital_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="المستشفى : القصر العينى"
@@ -85,6 +90,7 @@
 
                 />
             <TextView
+                android:id="@+id/home_donor_details_address_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="العنوان : شبين"
@@ -92,6 +98,7 @@
 
                 />
             <TextView
+                android:id="@+id/home_donor_details_phone_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="رقم الجوال : 01094657676"
@@ -99,6 +106,7 @@
 
                 />
             <TextView
+                android:id="@+id/home_donor_details_notes_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -110,12 +118,13 @@
                 android:textSize="@dimen/_15ssp"
                 />
             <ImageView
+                android:id="@+id/home_donor_details_location_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/google_map"
                 />
             <Button
-                android:id="@+id/login_btn_next"
+                android:id="@+id/home_donor_details_contact_btn"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginTop="@dimen/_20sdp"

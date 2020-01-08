@@ -11,8 +11,9 @@ import com.example.bloodbank.view.fragment.homeCycle2.home.DonationRequestsFragm
 import com.example.bloodbank.view.fragment.homeCycle2.home.HomeFragment;
 
 public class MyTabbedAdapter extends FragmentPagerAdapter {
-    HomeFragment context;
-    int totalTabs;
+    private   HomeFragment context;
+    private int totalTabs;
+    private ArticlesFragment article;
     public MyTabbedAdapter(HomeFragment c, FragmentManager fm, int totalTabs) {
         super(fm);
         context = c;
@@ -22,14 +23,14 @@ public class MyTabbedAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                ArticlesFragment article  = new ArticlesFragment();
+                 article  = new ArticlesFragment();
                 return article;
             case 1:
                 DonationRequestsFragment donationRequests = new DonationRequestsFragment();
                 return donationRequests;
 
             default:
-                return null;
+                return new HomeFragment();
         }
     }
     @Override

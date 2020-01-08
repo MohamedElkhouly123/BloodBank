@@ -3,7 +3,8 @@ import android.app.Activity;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 import com.example.bloodbank.adapter.EmptySpinnerAdapter;
-import com.example.bloodbank.model.listOfCities.GeneralResponse;
+import com.example.bloodbank.data.model.generalResponse.GeneralResponse;
+import com.example.bloodbank.data.model.generalResponse.GeneralResponseData2;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -25,9 +26,13 @@ public class GeneralRequest {
                 } catch (Exception e) {
                 }
             }
+
             @Override
             public void onFailure(Call<GeneralResponse> call, Throwable t) {
+
             }
+
+
         });
     }
     public static void getData(Call<GeneralResponse> call, EmptySpinnerAdapter adapter, String hint, Spinner spinner, AdapterView.OnItemSelectedListener listener) {

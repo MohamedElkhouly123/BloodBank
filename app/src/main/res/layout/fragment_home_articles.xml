@@ -35,7 +35,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <Spinner
-                android:id="@+id/register_blood_type_id_spinner"
+                android:id="@+id/home_articles_categories_id_spinner"
                 style="@style/spinner_style"
                 android:layout_width="@dimen/_120sdp"
                 android:layout_height="@dimen/_20sdp"
@@ -44,7 +44,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/register_blood_type_etxt"
+            android:id="@+id/home_articles_categories_etxt"
 
             style="@style/EditText"
             android:layout_width="@dimen/_216sdp"
@@ -59,7 +59,8 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+        android:id="@+id/home_articles_recycler_view"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/_15sdp"
@@ -76,7 +77,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/edit_floating_action_button"
+        android:id="@+id/home_articles_add_floating_action_button"
         style="@style/Widget.Design.FloatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

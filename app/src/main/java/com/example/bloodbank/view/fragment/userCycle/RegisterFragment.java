@@ -14,7 +14,7 @@ import androidx.cardview.widget.CardView;
 
 import com.example.bloodbank.R;
 import com.example.bloodbank.adapter.EmptySpinnerAdapter;
-import com.example.bloodbank.model.register.Register;
+import com.example.bloodbank.data.model.client.Client;
 import com.example.bloodbank.view.fragment.BaSeFragment;
 
 import butterknife.BindView;
@@ -25,6 +25,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import static com.example.bloodbank.data.api.ApiClient.getApiClient;
+import static com.example.bloodbank.data.local.SharedPreferencesManger.SaveData;
+import static com.example.bloodbank.data.local.SharedPreferencesManger.USER_DATA;
+import static com.example.bloodbank.data.local.SharedPreferencesManger.USER_PASSWORD;
 import static com.example.bloodbank.utils.GeneralRequest.getData;
 import static com.example.bloodbank.utils.HelperMethod.showToast;
 
@@ -206,14 +209,18 @@ public class RegisterFragment extends BaSeFragment {
     }
 
     private void onCall(String nameStr, String emailStr, String birth_day_str, String cityIdStr, String phoneStr, String last_date_to_donation_str, String passwordStr, String confirm_passwordStr, String blood_type_idStr) {
-        getApiClient().userRegister(nameStr, emailStr, birth_day_Str, cityIdStr, phoneStr, last_date_to_donation_Str, passwordStr, confirm_passwordStr, blood_type_IdStr).enqueue(new Callback<Register>() {
+        getApiClient().userRegister(nameStr, emailStr, birth_day_Str, cityIdStr, phoneStr, last_date_to_donation_Str, passwordStr, confirm_passwordStr, blood_type_IdStr).enqueue(new Callback<Client>() {
+
+
             @Override
-            public void onResponse(Call<Register> call, Response<Register> response) {
+            public void onResponse(Call<Client> call, Response<Client> response) {
                 try {
                     if (response.body().getStatus() == 1) {
 //                    String msg= response.errorBody().toString();
 //                        showToast(getActivity(),msg);
 
+                        SaveData(getActivity(), USER_DATA, response.body().getData());
+                        SaveData(getActivity(), USER_PASSWORD, passwordStr);
 
                     }
                 } catch (Exception e) {
@@ -222,7 +229,7 @@ public class RegisterFragment extends BaSeFragment {
             }
 
             @Override
-            public void onFailure(Call<Register> call, Throwable t) {
+            public void onFailure(Call<Client> call, Throwable t) {
                 try {
                     String msg= t.getMessage();
                     showToast(getActivity(),msg);

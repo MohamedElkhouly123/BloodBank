@@ -1,9 +1,5 @@
 package com.example.bloodbank.view.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.os.Bundle;
 
 import com.example.bloodbank.R;
@@ -18,7 +14,7 @@ public class UserCycleActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_cycle);
               LoginFragment fragment = new LoginFragment();
-        replaceFragment(getSupportFragmentManager(), R.id.fram, new LoginFragment());
+        replaceFragment(getSupportFragmentManager(), R.id.home_activity_fram, new LoginFragment());
     }
 
 }
