@@ -91,6 +91,7 @@
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:focusable="false"
                     android:drawableStart="@drawable/ic_date_range_black_24dp"
                     android:hint=" تاريخ الميلاد"
                     android:inputType="date" />
@@ -131,11 +132,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:drawableStart="@drawable/ic_invert_colors_black_24dp"
-                        android:focusable="false"
                         android:hint=" فصيله الدم"
+                        android:focusable="false"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent" />                        android:focusable="false"
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -150,6 +152,7 @@
                     style="@style/EditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:focusable="false"
                     android:drawableStart="@drawable/ic_date_range_black_24dp"
                     android:hint=" اخر تاريخ للتبرع"
                     android:inputType="date" />

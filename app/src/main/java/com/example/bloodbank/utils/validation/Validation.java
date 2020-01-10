@@ -6,6 +6,7 @@ import android.telephony.TelephonyManager;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.example.bloodbank.R;
 import com.example.bloodbank.utils.ToastCreator;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -210,9 +211,9 @@ public class Validation {
         }
     }
 
-    public static boolean validationAllEmpty(List<EditText> editTexts, List<TextInputLayout> textInputLayouts, List<Spinner> spinners, String errorText) {
+    public static boolean validationAllEmpty(List<EditText> editTexts,  List<Spinner> spinners, String errorText) {
 
-        if (validationEditTextsEmpty(editTexts, errorText) && validationTextInputLayoutListEmpty(textInputLayouts, errorText)
+        if (validationEditTextsEmpty(editTexts, errorText)
                 && validationSpinnersEmpty(spinners)) {
             return true;
         } else {
@@ -234,8 +235,8 @@ public class Validation {
         if (phone1.length() >= country1.getLength_min() && phone.length() <= country1.getLength_max()) {
             return true;
         } else {
-//            ToastCreator.onCreateErrorToast(activity, activity.getString(R.string.invalid_phone1) + " " + country1.getLength_min()
-//                    + " " + activity.getString(R.string.invalid_phone2));
+            ToastCreator.onCreateErrorToast(activity, activity.getString(R.string.invalid_phone1) + " " + country1.getLength_min()
+                    + " " + activity.getString(R.string.invalid_phone2));
             return false;
         }
     }
@@ -253,8 +254,8 @@ public class Validation {
         if (phone1.length() >= country1.getLength_min() && phone.getText().length() <= country1.getLength_max()) {
             return true;
         } else {
-//            phone.setError(activity.getString(R.string.invalid_phone1) + " " + country1.getLength_min()
-//                    + " " + activity.getString(R.string.invalid_phone2));
+            phone.setError(activity.getString(R.string.invalid_phone1) + " " + country1.getLength_min()
+                    + " " + activity.getString(R.string.invalid_phone2));
             return false;
         }
     }
@@ -273,8 +274,8 @@ public class Validation {
         if (phone1.length() >= country1.getLength_min() && phone.getEditText().getText().length() <= country1.getLength_max()) {
             return true;
         } else {
-//            phone.setError(activity.getString(R.string.invalid_phone1) + " " + country1.getLength_min()
-//                    + " " + activity.getString(R.string.invalid_phone2));
+            phone.setError(activity.getString(R.string.invalid_phone1) + " " + country1.getLength_min()
+                    + " " + activity.getString(R.string.invalid_phone2));
             return false;
         }
     }
@@ -282,7 +283,7 @@ public class Validation {
     public static boolean validationEmail(Activity activity, String email) {
 
         if (!email.matches(EMAIL_PATTERN)) {
-//            ToastCreator.onCreateErrorToast(activity, activity.getString(R.string.invalid_email));
+            ToastCreator.onCreateErrorToast(activity, activity.getString(R.string.invalid_email));
             return false;
         } else {
             return true;
@@ -293,7 +294,7 @@ public class Validation {
     public static boolean validationEmail(Activity activity, EditText email) {
 
         if (!email.getText().toString().matches(EMAIL_PATTERN)) {
-//            email.setError(activity.getString(R.string.invalid_email));
+            email.setError(activity.getString(R.string.invalid_email));
             return false;
         } else {
             return true;
@@ -304,7 +305,7 @@ public class Validation {
     public static boolean validationEmail(Activity activity, TextInputLayout email) {
 
         if (!email.getEditText().getText().toString().matches(EMAIL_PATTERN)) {
-//            email.getEditText().setError(activity.getString(R.string.invalid_email));
+            email.getEditText().setError(activity.getString(R.string.invalid_email));
             return false;
         } else {
             return true;
@@ -343,7 +344,7 @@ public class Validation {
         if (password.equals(confirmPassword)) {
             return true;
         } else {
-//            ToastCreator.onCreateErrorToast(activity, activity.getString(R.string.invalid_confirm_password));
+            ToastCreator.onCreateErrorToast(activity, activity.getString(R.string.invalid_confirm_password));
             return false;
         }
     }
@@ -353,7 +354,7 @@ public class Validation {
         if (password.getText().toString().equals(confirmPassword.getText().toString())) {
             return true;
         } else {
-//            confirmPassword.setError(activity.getString(R.string.invalid_confirm_password));
+            confirmPassword.setError(activity.getString(R.string.invalid_confirm_password));
             return false;
         }
 
@@ -364,7 +365,7 @@ public class Validation {
         if (password.getEditText().getText().toString().equals(confirmPassword.getEditText().getText().toString())) {
             return true;
         } else {
-//            confirmPassword.getEditText().setError(activity.getString(R.string.invalid_confirm_password));
+            confirmPassword.getEditText().setError(activity.getString(R.string.invalid_confirm_password));
             return false;
         }
 
