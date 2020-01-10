@@ -59,6 +59,8 @@ public class NotificationsFragment extends BaSeFragment {
     View errorSubView;
     @BindView(R.id.donations_list_Fragment_sr_refresh_donations)
     SwipeRefreshLayout donationsListFragmentSrRefreshDonations;
+    @BindView(R.id.notifications_fragment_s_fl_shimmer_donations)
+    ShimmerFrameLayout notificationsFragmentSFlShimmerDonations;
 
     private LinearLayoutManager linearLayoutManager;
     private List<GetNotificationListData> notificationsDataList = new ArrayList<>();
@@ -132,7 +134,8 @@ public class NotificationsFragment extends BaSeFragment {
 
         if (page == 1) {
             errorSubView.setVisibility(View.GONE);
-
+            notificationsFragmentSFlShimmerDonations.startShimmer();
+            notificationsFragmentSFlShimmerDonations.setVisibility(View.VISIBLE);
         }
 
         if (isConnected(getActivity())) {
@@ -141,7 +144,8 @@ public class NotificationsFragment extends BaSeFragment {
                 @Override
                 public void onResponse(Call<GetNotificationList> call, Response<GetNotificationList> response) {
                     try {
-
+                        notificationsFragmentSFlShimmerDonations.stopShimmer();
+                        notificationsFragmentSFlShimmerDonations.setVisibility(View.GONE);
                         loadMore.setVisibility(View.GONE);
                         donationsListFragmentSrRefreshDonations.setRefreshing(false);
 
@@ -165,7 +169,8 @@ public class NotificationsFragment extends BaSeFragment {
                 @Override
                 public void onFailure(Call<GetNotificationList> call, Throwable t) {
                     try {
-
+                        notificationsFragmentSFlShimmerDonations.stopShimmer();
+                        notificationsFragmentSFlShimmerDonations.setVisibility(View.GONE);
                         loadMore.setVisibility(View.GONE);
                         donationsListFragmentSrRefreshDonations.setRefreshing(false);
                         setError(getString(R.string.error_list));
@@ -177,7 +182,8 @@ public class NotificationsFragment extends BaSeFragment {
 
         } else {
             try {
-
+                notificationsFragmentSFlShimmerDonations.stopShimmer();
+                notificationsFragmentSFlShimmerDonations.setVisibility(View.GONE);
                 loadMore.setVisibility(View.GONE);
                 donationsListFragmentSrRefreshDonations.setRefreshing(false);
                 setError(getString(R.string.error_inter_net));

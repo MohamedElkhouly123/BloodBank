@@ -7,9 +7,11 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
@@ -42,33 +44,87 @@
                 android:layout_gravity="center"
                  />
         </LinearLayout>
-
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    >
+    <ImageView
+        android:id="@+id/home_articles_search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_search_red_24dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        />
         <EditText
             android:id="@+id/home_articles_categories_etxt"
-
+            android:layout_gravity="center"
             style="@style/EditText"
-            android:layout_width="@dimen/_216sdp"
-            android:layout_height="match_parent"
-            android:drawableStart="@drawable/ic_search_red_24dp"
-            android:focusable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:hint="ادخل كلمه البحث هنا"
-            android:textAlignment="textEnd"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textAlignment="center"
+          />
+</LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/home_articles_recycler_view"
-
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/_15sdp"
-        android:scrollbars="vertical"
+        android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        >
+        <com.facebook.shimmer.ShimmerFrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/notifications_fragment_s_fl_shimmer_donations"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/donations_list_Fragment_sr_refresh_donations"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/home_articles_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="@dimen/_15sdp"
+                        android:scrollbars="vertical"
+                        android:layout_above="@+id/load_more" />
+
+                    <include
+                        layout="@layout/item_load_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true" />
+
+                    <include layout="@layout/error" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
     </ScrollView>
     <LinearLayout
         android:layout_width="match_parent"

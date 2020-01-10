@@ -9,7 +9,6 @@ import com.example.bloodbank.data.model.generalResponse.GeneralResponse;
 import com.example.bloodbank.data.model.posts.getAllPosts.GetAllPosts;
 import com.example.bloodbank.data.model.notifications.getNotificationList.GetNotificationList;
 import com.example.bloodbank.data.model.notificationSetting.NotificationSetting;
-import com.example.bloodbank.data.model.generalResponse.GeneralResponseData2;
 import com.example.bloodbank.data.model.client.Client;
 import com.example.bloodbank.data.model.notifications.notificationCount.NotificationCount;
 import com.example.bloodbank.data.model.posts.postToggleFavourite.PostToggleFavourite;
@@ -153,7 +152,7 @@ public interface ApiServices {
     );
 
     @GET("categories")
-    Call<GeneralResponseData2> getCategories();
+    Call<GeneralResponse> getCategories();
 
     @POST("contact")
     @FormUrlEncoded
@@ -204,7 +203,7 @@ public interface ApiServices {
     @GET("posts")
     Call<GetAllPosts> getAllPosts(
             @Query("api_token") String api_token,
-            @Query("page") String page
+            @Query("page") int page
 
     );
 
@@ -212,8 +211,8 @@ public interface ApiServices {
     Call<GetAllPosts> postsFilter(
             @Query("api_token") String api_token,
             @Query("page") String page,
-            @Query("keyword") String keyword,
-            @Query("category_id") String category_id
+            @Query("keyword") int keyword,
+            @Query("category_id") int category_id
 
     );
 
@@ -228,7 +227,7 @@ public interface ApiServices {
     @GET("my-favourites")
     Call<GetAllPosts> getAllFavouritePosts(
             @Query("api_token") String api_token,
-            @Query("page") String page
+            @Query("page") int page
 
     );
 
