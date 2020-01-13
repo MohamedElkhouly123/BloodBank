@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
@@ -31,8 +30,7 @@ public class AddDonationRequestFragment extends BaSeFragment {
     EditText homeAddDonationRequestBloodTypeEtxt;
     @BindView(R.id.home_add_donation_request_bags_number_etxt)
     EditText homeAddDonationRequestBagsNumberEtxt;
-    @BindView(R.id.home_add_donation_request_hospital_location_etxt)
-    TextView homeAddDonationRequestHospitalLocationEtxt;
+
     @BindView(R.id.home_add_donation_request_governrate_etxt)
     EditText homeAddDonationRequestGovernrateEtxt;
     @BindView(R.id.home_add_donation_request_governrate_id_spinner)
@@ -47,6 +45,8 @@ public class AddDonationRequestFragment extends BaSeFragment {
     EditText homeAddDonationRequestNotes;
     @BindView(R.id.home_add_donation_request_send_btn)
     Button homeAddDonationRequestSendBtn;
+    @BindView(R.id.home_add_donation_request_hospital_address_etxt)
+    EditText homeAddDonationRequestHospitalAddressEtxt;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -57,13 +57,14 @@ public class AddDonationRequestFragment extends BaSeFragment {
         return root;
     }
 
-    @OnClick({R.id.home_add_donation_request_hospital_location_etxt, R.id.home_add_donation_request_send_btn})
+    @OnClick({R.id.home_add_donation_request_hospital_location_img, R.id.home_add_donation_request_send_btn})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.home_add_donation_request_hospital_location_etxt:
+            case R.id.home_add_donation_request_hospital_location_img:
                 break;
             case R.id.home_add_donation_request_send_btn:
                 break;
         }
     }
+
 }

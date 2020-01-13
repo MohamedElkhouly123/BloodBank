@@ -47,7 +47,7 @@ public class PostsAndFavouritesAdapter extends RecyclerView.Adapter<PostsAndFavo
     private ClientData clientData;
     private ApiServices apiService;
 
-    public PostsAndFavouritesAdapter(Activity activity,
+    public PostsAndFavouritesAdapter(Context context,Activity activity,
                                      List<PostsData> postsDataList,
                                      boolean favourites) {
         this.context = context;

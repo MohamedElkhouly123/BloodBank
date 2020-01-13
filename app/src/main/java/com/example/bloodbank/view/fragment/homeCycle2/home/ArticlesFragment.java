@@ -127,7 +127,7 @@ public class ArticlesFragment extends BaSeFragment {
         };
         homeArticlesRecyclerView.addOnScrollListener(onEndLess);
 
-        postsAdapter = new PostsAndFavouritesAdapter(getActivity(), postsDataList, false);
+        postsAdapter = new PostsAndFavouritesAdapter(getContext(),getActivity(), postsDataList, false);
         homeArticlesRecyclerView.setAdapter(postsAdapter);
 
         if (PostsFilter) {
@@ -234,7 +234,7 @@ public class ArticlesFragment extends BaSeFragment {
         onEndLess.current_page = 1;
         onEndLess.previous_page = 1;
         postsDataList = new ArrayList<>();
-        postsAdapter = new PostsAndFavouritesAdapter(getActivity(), postsDataList, false);
+        postsAdapter = new PostsAndFavouritesAdapter(getContext(),getActivity(), postsDataList, false);
         homeArticlesRecyclerView.setAdapter(postsAdapter);
     }
 

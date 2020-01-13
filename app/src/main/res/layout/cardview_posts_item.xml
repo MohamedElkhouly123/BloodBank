@@ -20,6 +20,7 @@
         android:orientation="vertical"
         card_view:cardUseCompatPadding="true"
         card_view:cardCornerRadius="8dp"
+        android:backgroundTint="@color/color2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:foreground="?selectableItemBackground"
@@ -27,16 +28,15 @@
         >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_140sdp">
+        android:layout_height="@dimen/_165sdp">
 
-        <com.github.siyamed.shapeimageview.mask.PorterCircularImageView
+        <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
             android:id="@+id/article_item_img"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:contentDescription="action_settings"
             android:scaleType="centerCrop"
-            android:src="@drawable/brittany_colette"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,6 @@
                 android:layout_marginEnd="@dimen/_15sdp"
                 android:backgroundTint="@color/color2"
                 android:elevation="7dp"
-                app:srcCompat="@drawable/ic_favorite_border_black_24dp"
                 tools:ignore="VectorDrawableCompat" />
 
         </LinearLayout>
@@ -76,7 +75,6 @@
             android:background="@drawable/searchlight2"
             android:elevation="@dimen/_12sdp"
             android:gravity="center"
-            android:text="طرق الوقايه من الامراض"
             android:textColor="#fff"
             android:textSize="@dimen/_16ssp"
             android:textStyle="bold"

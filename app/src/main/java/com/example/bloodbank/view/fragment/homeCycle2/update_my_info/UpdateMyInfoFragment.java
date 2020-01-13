@@ -95,7 +95,9 @@ public class UpdateMyInfoFragment extends BaSeFragment {
     private String passwordStr;
     private String confirm_passwordStr;
     private String blood_type_IdStr;
-    private int blood_type_spinnerStr, governrate_spinnerStr, citySpinnerStr;
+    private int blood_type_spinnerStr;
+    private String governrate_spinnerStr;
+    private int citySpinnerStr;
     private boolean blood_type_flag = true;
     private boolean governrate_flag = true;
     private boolean cityFlag = true;
@@ -120,7 +122,7 @@ public class UpdateMyInfoFragment extends BaSeFragment {
 
     private void setUserData() {
         blood_type_spinnerStr = clientData.getClient().getBloodType().getId();
-        governrate_spinnerStr = clientData.getClient().getGovernorate().getId();
+        governrate_spinnerStr = clientData.getClient().getCity().getGovernorateId();
         citySpinnerStr = clientData.getClient().getCity().getId();
 
         updateMyInfoNameEtxt.setText(clientData.getClient().getName());
@@ -131,8 +133,6 @@ public class UpdateMyInfoFragment extends BaSeFragment {
 
         updateMyInfoBirthDayEtxt.setText(clientData.getClient().getBirthDate());
         updateMyInfoLastDateToDonationEtxt.setText(clientData.getClient().getDonationLastDate());
-
-
 
     }
 

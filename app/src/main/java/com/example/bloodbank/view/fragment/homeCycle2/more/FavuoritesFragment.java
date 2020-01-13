@@ -107,7 +107,7 @@ public class FavuoritesFragment extends BaSeFragment {
         };
         moreMyFavouriteRecyclerView.addOnScrollListener(onEndLess);
 
-        favouritePostsAdapter = new PostsAndFavouritesAdapter(getActivity(), favouritepostsDataList, false);
+        favouritePostsAdapter = new PostsAndFavouritesAdapter(getContext(),getActivity(), favouritepostsDataList, false);
         moreMyFavouriteRecyclerView.setAdapter(favouritePostsAdapter);
 
 
@@ -129,7 +129,7 @@ public class FavuoritesFragment extends BaSeFragment {
         onEndLess.current_page = 1;
         onEndLess.previous_page = 1;
         favouritepostsDataList = new ArrayList<>();
-        favouritePostsAdapter = new PostsAndFavouritesAdapter(getActivity(), favouritepostsDataList, false);
+        favouritePostsAdapter = new PostsAndFavouritesAdapter(getContext(),getActivity(), favouritepostsDataList, false);
         moreMyFavouriteRecyclerView.setAdapter(favouritePostsAdapter);
     }
 
