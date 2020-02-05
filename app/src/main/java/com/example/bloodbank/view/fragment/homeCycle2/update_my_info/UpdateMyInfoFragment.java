@@ -24,7 +24,9 @@ import com.example.bloodbank.utils.ToastCreator;
 import com.example.bloodbank.view.activity.HomeCycleActivity;
 import com.example.bloodbank.view.fragment.BaSeFragment;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import butterknife.BindView;
@@ -114,6 +116,7 @@ public class UpdateMyInfoFragment extends BaSeFragment {
         View root = inflater.inflate(R.layout.fragment_update_my_info, container, false);
         ButterKnife.bind(this, root);
         SpinnerExecute();
+        setDates();
         setUpActivity();
         clientData = LoadUserData(getActivity());
         setUserData();
@@ -133,6 +136,17 @@ public class UpdateMyInfoFragment extends BaSeFragment {
 
         updateMyInfoBirthDayEtxt.setText(clientData.getClient().getBirthDate());
         updateMyInfoLastDateToDonationEtxt.setText(clientData.getClient().getDonationLastDate());
+
+    }
+    private void setDates() {
+        DecimalFormat mFormat = new DecimalFormat("00");
+        Calendar calander = Calendar.getInstance();
+        String cDay = mFormat.format(Double.valueOf(String.valueOf(calander.get(Calendar.DAY_OF_MONTH))));
+        String cMonth = mFormat.format(Double.valueOf(String.valueOf(calander.get(Calendar.MONTH + 1))));
+        String cYear = String.valueOf(calander.get(Calendar.YEAR));
+
+        lastDonationDate = new DateTxt(cDay, cMonth, cYear, cDay + "-" + cMonth + "-" + cYear);
+        birthdayDate = new DateTxt("01", "01", "1990", "01-01-1990");
 
     }
 

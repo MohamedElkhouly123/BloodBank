@@ -51,7 +51,7 @@ public class HelperMethod {
         recyclerView.setLayoutManager(gridLayoutManager);
     }
     public static void showCalender(Context context, String title, final TextView text_view_data, final DateTxt data1) {
-        DatePickerDialog mDatePicker = new DatePickerDialog(context, AlertDialog.THEME_HOLO_DARK, new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog mDatePicker = new DatePickerDialog(context, AlertDialog.THEME_HOLO_LIGHT, new DatePickerDialog.OnDateSetListener() {
             public void onDateSet(DatePicker datepicker, int selectedYear, int selectedMonth, int selectedDay) {
                 DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.US);
                 DecimalFormat mFormat = new DecimalFormat("00", symbols);
@@ -64,6 +64,7 @@ public class HelperMethod {
             }
         }, Integer.parseInt(data1.getYear()), Integer.parseInt(data1.getMonth()) - 1, Integer.parseInt(data1.getDay()));
         mDatePicker.setTitle(title);
+
         mDatePicker.show();
     }
 

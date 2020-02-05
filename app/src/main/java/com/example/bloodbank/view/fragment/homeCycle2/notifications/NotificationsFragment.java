@@ -16,7 +16,6 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.bloodbank.R;
 import com.example.bloodbank.adapter.NotificationAdapter;
-import com.example.bloodbank.data.api.ApiClient;
 import com.example.bloodbank.data.model.client.ClientData;
 import com.example.bloodbank.data.model.notifications.getNotificationList.GetNotificationList;
 import com.example.bloodbank.data.model.notifications.getNotificationList.GetNotificationListData;
@@ -30,8 +29,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
-import butterknife.Unbinder;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -226,7 +223,7 @@ public class NotificationsFragment extends BaSeFragment {
 
     @Override
     public void onBack() {
-        replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram
+        replaceFragment(getActivity().getSupportFragmentManager(), R.id.user_activity_fram
                 , new NotificationsFragment());
     }
 }

@@ -262,7 +262,7 @@ public class ArticlesFragment extends BaSeFragment {
             case R.id.home_articles_categories_etxt:
                 break;
             case R.id.home_articles_add_floating_action_button:
-                replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram, new AddDonationRequestFragment());
+                replaceFragment(getActivity().getSupportFragmentManager(), R.id.user_activity_fram, new AddDonationRequestFragment());
                 navBar.setVisibility(View.GONE);
 
                 break;
@@ -282,7 +282,7 @@ public class ArticlesFragment extends BaSeFragment {
     @Override
     public void onBack() {
 
-        replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram
+        replaceFragment(getActivity().getSupportFragmentManager(), R.id.user_activity_fram
                 , new MoreFragment());
     }
 

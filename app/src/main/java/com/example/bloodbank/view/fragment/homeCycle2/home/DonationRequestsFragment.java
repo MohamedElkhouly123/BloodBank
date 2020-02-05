@@ -11,8 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bloodbank.R;
 import com.example.bloodbank.view.fragment.BaSeFragment;
-import com.example.bloodbank.view.fragment.homeCycle2.notifications.NotificationsFragment;
-import com.example.bloodbank.view.fragment.userCycle.RegisterFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -46,7 +44,7 @@ public class DonationRequestsFragment extends BaSeFragment {
 
     @OnClick(R.id.home_donation_requests_floating_action_btn)
     public void onViewClicked() {
-        replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram, new AddDonationRequestFragment());
+        replaceFragment(getActivity().getSupportFragmentManager(), R.id.user_activity_fram, new AddDonationRequestFragment());
         navBar.setVisibility(View.GONE);
 
     }

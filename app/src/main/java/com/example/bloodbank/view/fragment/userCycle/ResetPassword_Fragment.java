@@ -57,7 +57,7 @@ public class ResetPassword_Fragment extends BaSeFragment {
 
                     if (response.body().getStatus() == 1) {
                         SaveData(getActivity(), PHONE, phone);
-                        replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram, new NewPassword_Fragment());
+                        replaceFragment(getActivity().getSupportFragmentManager(), R.id.user_activity_fram, new NewPassword_Fragment());
 
                     }
 

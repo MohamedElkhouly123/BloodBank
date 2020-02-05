@@ -61,6 +61,7 @@ public class SharedPreferencesManger {
         return sharedPreferences.getString(data_Key, null);
     }
 
+
     public static ClientData LoadUserData(Activity activity) {
         setSharedPreferences(activity);
 

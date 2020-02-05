@@ -14,7 +14,7 @@ public class UserCycleActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_cycle);
               LoginFragment fragment = new LoginFragment();
-        replaceFragment(getSupportFragmentManager(), R.id.home_activity_fram, new LoginFragment());
+        replaceFragment(getSupportFragmentManager(), R.id.user_activity_fram, new LoginFragment());
     }
 
 }

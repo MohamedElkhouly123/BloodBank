@@ -24,7 +24,9 @@ import com.example.bloodbank.utils.ToastCreator;
 import com.example.bloodbank.view.activity.HomeCycleActivity;
 import com.example.bloodbank.view.fragment.BaSeFragment;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import butterknife.BindView;
@@ -111,6 +113,7 @@ public class RegisterFragment extends BaSeFragment {
         View root = inflater.inflate(R.layout.fragment_register, container, false);
         ButterKnife.bind(this, root);
         SpinnerExecute();
+        setDates();
 
         return root;
     }
@@ -129,6 +132,8 @@ public class RegisterFragment extends BaSeFragment {
         confirm_passwordStr = registerConfirmPasswordEtxt.getText().toString().trim();
         blood_type_IdStr = String.valueOf(bloodTypeId);
         cityIdStr = String.valueOf(cityId);
+
+
 //        if (phoneStr.length() != 11) {
 //            showToast(getActivity(), "Password must more  than 3 chars");
 //
@@ -156,6 +161,18 @@ public class RegisterFragment extends BaSeFragment {
 //            return;
 //        }
         onValidation();
+
+    }
+
+    private void setDates() {
+        DecimalFormat mFormat = new DecimalFormat("00");
+        Calendar calander = Calendar.getInstance();
+        String cDay = mFormat.format(Double.valueOf(String.valueOf(calander.get(Calendar.DAY_OF_MONTH))));
+        String cMonth = mFormat.format(Double.valueOf(String.valueOf(calander.get(Calendar.MONTH + 1))));
+        String cYear = String.valueOf(calander.get(Calendar.YEAR));
+
+        lastDonationDate = new DateTxt(cDay, cMonth, cYear, cDay + "-" + cMonth + "-" + cYear);
+        birthdayDate = new DateTxt("01", "01", "1990", "01-01-1990");
 
     }
     private void onValidation() {

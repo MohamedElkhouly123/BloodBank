@@ -48,6 +48,7 @@
 
         <activity
             android:name=".view.activity.HomeCycleActivity"
+            android:windowSoftInputMode="adjustPan"
             android:label="@string/title_activity_home_cycle">
 
         </activity>

@@ -11,7 +11,6 @@ import com.example.bloodbank.view.fragment.homeCycle2.notifications.Notification
 import com.example.bloodbank.view.fragment.homeCycle2.update_my_info.UpdateMyInfoFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import static com.example.bloodbank.utils.HelperMethod.replaceFragment;
@@ -31,7 +30,7 @@ public class HomeCycleActivity extends BaseActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_cycle);
         ButterKnife.bind(this);
-        replaceFragment(getSupportFragmentManager(), R.id.home_activity_fram, new HomeFragment());
+        replaceFragment(getSupportFragmentManager(), R.id.user_activity_fram, new HomeFragment());
 
                  navView = (BottomNavigationView) findViewById(R.id.nav_view);
 //        navView.setOnNavigationItemSelectedListener(onNavigationItemSelected());
@@ -62,14 +61,14 @@ public class HomeCycleActivity extends BaseActivity implements BottomNavigationV
         int id = item.getItemId();
 
         if (id == R.id.navigation_home) {
-            replaceFragment(getSupportFragmentManager(), R.id.home_activity_fram, new HomeFragment());
+            replaceFragment(getSupportFragmentManager(), R.id.user_activity_fram, new HomeFragment());
         } else if (id == R.id.navigation_update_my_info) {
-            replaceFragment(getSupportFragmentManager(), R.id.home_activity_fram, new UpdateMyInfoFragment());
+            replaceFragment(getSupportFragmentManager(), R.id.user_activity_fram, new UpdateMyInfoFragment());
         } else if (id == R.id.navigation_notifications) {
-            replaceFragment(getSupportFragmentManager(), R.id.home_activity_fram, new NotificationsFragment());
+            replaceFragment(getSupportFragmentManager(), R.id.user_activity_fram, new NotificationsFragment());
 
         } else if (id == R.id.navigation_more_setting) {
-            replaceFragment(getSupportFragmentManager(), R.id.home_activity_fram, new MoreFragment());
+            replaceFragment(getSupportFragmentManager(), R.id.user_activity_fram, new MoreFragment());
         }
 
 

@@ -70,7 +70,7 @@ public class LoginFragment extends BaSeFragment {
             case R.id.login_remember_me_chbox:
                 break;
             case R.id.login_forget_id:
-                replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram, new ResetPassword_Fragment());
+                replaceFragment(getActivity().getSupportFragmentManager(), R.id.user_activity_fram, new ResetPassword_Fragment());
                 break;
             case R.id.login_btn_next:
                 phoneStr=loginPhoneEtxt.getText().toString().trim();
@@ -91,7 +91,7 @@ public class LoginFragment extends BaSeFragment {
                 break;
             case R.id.login_creat_new_account_txt:
                 RegisterFragment register = new RegisterFragment();
-                replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram, new RegisterFragment());
+                replaceFragment(getActivity().getSupportFragmentManager(), R.id.user_activity_fram, new RegisterFragment());
                 break;
         }
     }

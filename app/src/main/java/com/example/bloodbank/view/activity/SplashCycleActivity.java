@@ -31,12 +31,13 @@ public class SplashCycleActivity extends BaseActivity {
         Handler handler = new Handler();
         Runnable r = new Runnable() {
             public void run() {
-                if (LoadUserData(SplashCycleActivity.this) != null && LoadBoolean(SplashCycleActivity.this, REMEMBER_ME)) {
-                    startActivity(new Intent(SplashCycleActivity.this, HomeCycleActivity.class));
-                    finish();
-                }else {
-                    replaceFragment(getSupportFragmentManager(), R.id.home_activity_fram, new InroFragment());
-                }
+//                if (LoadUserData(SplashCycleActivity.this) != null && LoadBoolean(SplashCycleActivity.this, REMEMBER_ME)) {
+//                    startActivity(new Intent(SplashCycleActivity.this, HomeCycleActivity.class));
+//                    finish();
+//                }else {
+//                    replaceFragment(getSupportFragmentManager(), R.id.user_activity_fram, new InroFragment());
+//                }
+                replaceFragment(getSupportFragmentManager(), R.id.user_activity_fram, new InroFragment());
 
             }
         };

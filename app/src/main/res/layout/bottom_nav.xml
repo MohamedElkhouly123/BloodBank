@@ -23,7 +23,7 @@
             app:menu="@menu/bottom_nav_menu" />
 
         <FrameLayout
-            android:id="@+id/home_activity_fram"
+            android:id="@+id/user_activity_fram"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintLeft_toLeftOf="parent"
