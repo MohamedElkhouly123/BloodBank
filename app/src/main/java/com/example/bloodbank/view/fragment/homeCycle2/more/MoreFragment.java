@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 
 import com.example.bloodbank.R;
+import com.example.bloodbank.utils.LogOutDialog;
 import com.example.bloodbank.view.fragment.BaSeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -26,7 +27,7 @@ public class MoreFragment extends BaSeFragment {
 
         View root = inflater.inflate(R.layout.fragment_more, container, false);
         ButterKnife.bind(this, root);
-         navBar = getActivity().findViewById(R.id.nav_view);
+        navBar = getActivity().findViewById(R.id.nav_view);
         navBar.setVisibility(View.VISIBLE);
 
         return root;
@@ -55,6 +56,7 @@ public class MoreFragment extends BaSeFragment {
 
                 break;
             case R.id.more_sign_out_lay:
+                new LogOutDialog().showDialog(getActivity());
                 break;
         }
     }

@@ -1,5 +1,7 @@
 package com.example.bloodbank.view.fragment.userCycle;
 
+import android.app.ActionBar;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,6 +16,7 @@ import androidx.annotation.NonNull;
 
 import com.example.bloodbank.R;
 import com.example.bloodbank.data.model.client.Client;
+import com.example.bloodbank.utils.HelperMethod;
 import com.example.bloodbank.view.activity.HomeCycleActivity;
 import com.example.bloodbank.view.fragment.BaSeFragment;
 
@@ -51,6 +54,8 @@ public class LoginFragment extends BaSeFragment {
 
     private String phoneStr;
     private String passwordStr;
+    private ProgressDialog progressDialog;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -97,11 +102,19 @@ public class LoginFragment extends BaSeFragment {
     }
 
     private void onCall(String phone, String password) {
+        if (progressDialog == null) {
+            HelperMethod.showProgressDialog(getActivity(), getActivity().getString(R.string.wait));
+        } else {
+            if (!progressDialog.isShowing()) {
+                HelperMethod.showProgressDialog(getActivity(), getActivity().getString(R.string.wait));
+            }
+        }
         getApiClient().userLogin(phone, password).enqueue(new Callback<Client>() {
             @Override
             public void onResponse(Call<Client> call, Response<Client> response) {
 
                 try {
+                    HelperMethod.dismissProgressDialog();
 
                     if (response.body().getStatus() == 1) {
 
@@ -123,6 +136,7 @@ public class LoginFragment extends BaSeFragment {
 
             @Override
             public void onFailure(Call<Client> call, Throwable t) {
+                HelperMethod.dismissProgressDialog();
 
             }
         });

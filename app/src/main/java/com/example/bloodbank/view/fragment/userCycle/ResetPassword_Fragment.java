@@ -1,5 +1,6 @@
 package com.example.bloodbank.view.fragment.userCycle;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 
 import com.example.bloodbank.R;
 import com.example.bloodbank.data.model.resetPassword.ResetPassword;
+import com.example.bloodbank.utils.HelperMethod;
 import com.example.bloodbank.view.fragment.BaSeFragment;
 
 import butterknife.BindView;
@@ -35,6 +37,7 @@ public class ResetPassword_Fragment extends BaSeFragment {
 
     @BindView(R.id.reset_password_btn_sent)
     Button resetPasswordBtnSent;
+    private ProgressDialog progressDialog;
 
     private String phoneStr;
 
@@ -49,11 +52,19 @@ public class ResetPassword_Fragment extends BaSeFragment {
 
 
     private void onCall(String phone) {
+        if (progressDialog == null) {
+            HelperMethod.showProgressDialog(getActivity(), getActivity().getString(R.string.wait));
+        } else {
+            if (!progressDialog.isShowing()) {
+                HelperMethod.showProgressDialog(getActivity(), getActivity().getString(R.string.wait));
+            }
+        }
         getApiClient().userResetPassword(phone).enqueue(new Callback<ResetPassword>() {
             @Override
             public void onResponse(Call<ResetPassword> call, Response<ResetPassword> response) {
 
                 try {
+                    HelperMethod.dismissProgressDialog();
 
                     if (response.body().getStatus() == 1) {
                         SaveData(getActivity(), PHONE, phone);
@@ -71,6 +82,8 @@ public class ResetPassword_Fragment extends BaSeFragment {
             @Override
             public void onFailure(Call<ResetPassword> call, Throwable t) {
                 showToast(getActivity(), "error");
+                HelperMethod.dismissProgressDialog();
+
             }
         });
     }

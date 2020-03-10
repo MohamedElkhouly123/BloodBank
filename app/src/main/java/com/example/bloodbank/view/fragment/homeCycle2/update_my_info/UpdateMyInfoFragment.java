@@ -320,8 +320,8 @@ public class UpdateMyInfoFragment extends BaSeFragment {
                         SaveData(getActivity(), USER_PASSWORD, passwordStr);
                         onCreateSuccessToast(getActivity(), response.body().getMsg());
 
-                    }
-                    onCreateErrorToast(getActivity(), response.body().getMsg());
+                    }else {
+                    onCreateErrorToast(getActivity(), response.body().getMsg());}
 
                 } catch (Exception e) {
 

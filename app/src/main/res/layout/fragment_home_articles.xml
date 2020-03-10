@@ -58,7 +58,7 @@
         app:srcCompat="@drawable/ic_search_red_24dp"
         android:layout_gravity="center"
         android:layout_marginEnd="@dimen/_10sdp"
-        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_10sdp"
         />
         <EditText
             android:id="@+id/home_articles_categories_etxt"
@@ -155,5 +155,6 @@
 
         app:srcCompat="@drawable/ic_add_black_24dp"
         tools:ignore="VectorDrawableCompat" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

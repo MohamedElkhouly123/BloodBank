@@ -180,16 +180,16 @@ public interface ApiServices {
     @GET("donation-requests")
     Call<GetAllDonationRequests> getAllDonationRequests(
             @Query("api_token") String api_token,
-            @Query("page") String page
+            @Query("page") int page
 
     );
 
     @GET("donation-requests")
     Call<GetAllDonationRequests> getAllDonationRequestsFilter(
             @Query("api_token") String api_token,
-            @Query("blood_type_id") String blood_type_id,
-            @Query("governorate_id") String governorate_id,
-            @Query("page") String page
+            @Query("blood_type_id") int blood_type_id,
+            @Query("governorate_id") int governorate_id,
+            @Query("page") int page
 
     );
 

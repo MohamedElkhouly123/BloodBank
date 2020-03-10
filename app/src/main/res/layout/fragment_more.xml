@@ -185,6 +185,7 @@
             android:text="تسجيل الخروج"
             style="@style/MoreText"/>
     </LinearLayout>
+
 </LinearLayout>
     </ScrollView>
 </LinearLayout>

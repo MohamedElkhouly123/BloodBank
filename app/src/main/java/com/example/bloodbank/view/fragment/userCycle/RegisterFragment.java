@@ -346,8 +346,8 @@ public class RegisterFragment extends BaSeFragment {
                         Intent intent = new Intent(getActivity(), HomeCycleActivity.class);
                         startActivity(intent);
                         getActivity().finish();
-                    }
-                    onCreateErrorToast(getActivity(), response.body().getMsg());
+                    }else {
+                    onCreateErrorToast(getActivity(), response.body().getMsg());}
 
                 } catch (Exception e) {
 
