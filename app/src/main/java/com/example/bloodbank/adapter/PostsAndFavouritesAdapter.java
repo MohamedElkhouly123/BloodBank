@@ -105,7 +105,7 @@ public class PostsAndFavouritesAdapter extends RecyclerView.Adapter<PostsAndFavo
                 HomeCycleActivity navigationActivity = (HomeCycleActivity) activity;
                 ArticleItemDetailsFragment postDetails = new ArticleItemDetailsFragment();
                 postDetails.postsData = postsDataList.get(position);
-                HelperMethod.replaceFragment(navigationActivity.getSupportFragmentManager(), R.id.user_activity_fram, postDetails);
+                HelperMethod.replaceFragment(navigationActivity.getSupportFragmentManager(), R.id.home_activity_fram, postDetails);
 
             }
         });

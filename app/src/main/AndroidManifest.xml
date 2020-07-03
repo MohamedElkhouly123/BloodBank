@@ -48,10 +48,15 @@
 
         <activity
             android:name=".view.activity.HomeCycleActivity"
-            android:windowSoftInputMode="adjustPan"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_home_cycle">
 
         </activity>
+        <!--            android:windowSoftInputMode="adjustPan"
+                    android:screenOrientation="portrait"
+
+        stop Land Scape-->
+
         <activity android:name=".view.activity.UserCycleActivity">
 
         </activity>

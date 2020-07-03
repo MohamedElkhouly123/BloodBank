@@ -71,7 +71,7 @@ public class SplashFragment extends BaSeFragment {
 private void loadFragment(Fragment fragment) {
     // load fragment
     FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-    transaction.replace(R.id.user_activity_fram, fragment);
+    transaction.replace(R.id.home_activity_fram, fragment);
     transaction.addToBackStack(null);
     transaction.commit();
 }

@@ -223,7 +223,7 @@ public class NotificationsFragment extends BaSeFragment {
 
     @Override
     public void onBack() {
-        replaceFragment(getActivity().getSupportFragmentManager(), R.id.user_activity_fram
+        replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram
                 , new NotificationsFragment());
     }
 }

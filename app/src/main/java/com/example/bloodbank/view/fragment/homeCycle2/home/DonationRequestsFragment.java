@@ -202,7 +202,7 @@ private EmptySpinnerAdapter bloodTypesAdapter, gaviermentAdapter;
                                     public void onClick(View view) {
                                         AddDonationRequestFragment createDonationFragment = new AddDonationRequestFragment();
 //                                        createDonationFragment.donationsListFragment = DonationsListFragment.this;
-                                        replaceFragment(getActivity().getSupportFragmentManager(), R.id.user_activity_fram, createDonationFragment);
+                                        replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram, createDonationFragment);
                                     }
                                 };
 //                                setRecycleTool(baseActivity, errorSubView, errorImage, errorTitle, errorAction, R.drawable.ic_transfusion
@@ -284,7 +284,7 @@ private EmptySpinnerAdapter bloodTypesAdapter, gaviermentAdapter;
 
     @OnClick(R.id.home_donation_requests_floating_action_btn)
     public void onViewClicked() {
-        replaceFragment(getActivity().getSupportFragmentManager(), R.id.user_activity_fram, new AddDonationRequestFragment());
+        replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram, new AddDonationRequestFragment());
         navBar.setVisibility(View.GONE);
 
     }

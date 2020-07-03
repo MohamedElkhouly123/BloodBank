@@ -37,22 +37,22 @@ public class MoreFragment extends BaSeFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.more_my_favourte_lay:
-                replaceFragment(getActivity().getSupportFragmentManager(), R.id.user_activity_fram, new FavuoritesFragment());
+                replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram, new FavuoritesFragment());
 
                 break;
             case R.id.more_contact_us_lay:
-                replaceFragment(getActivity().getSupportFragmentManager(), R.id.user_activity_fram, new ContactUsFragment());
+                replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram, new ContactUsFragment());
                 navBar.setVisibility(View.GONE);
                 break;
             case R.id.more_about_app_lay:
-                replaceFragment(getActivity().getSupportFragmentManager(), R.id.user_activity_fram, new AboutAppFragment());
+                replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram, new AboutAppFragment());
 
                 break;
             case R.id.more_my_put_rate_on_store_lay:
 
                 break;
             case R.id.more_nottiffy_setting_lay:
-                replaceFragment(getActivity().getSupportFragmentManager(), R.id.user_activity_fram, new NottifySettingFragment());
+                replaceFragment(getActivity().getSupportFragmentManager(), R.id.home_activity_fram, new NottifySettingFragment());
 
                 break;
             case R.id.more_sign_out_lay:

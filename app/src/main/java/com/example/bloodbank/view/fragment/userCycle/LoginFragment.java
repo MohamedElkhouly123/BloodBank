@@ -1,6 +1,5 @@
 package com.example.bloodbank.view.fragment.userCycle;
 
-import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -140,5 +139,10 @@ public class LoginFragment extends BaSeFragment {
 
             }
         });
+    }
+
+    @Override
+    public void onBack() {
+        getActivity().finish();
     }
 }
